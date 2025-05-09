@@ -1,0 +1,11 @@
+<h2>Projects</h2>
+
+<ul *ngIf="projects.length > 0">
+  <li *ngFor="let project of projects">
+    {{ project.name || 'Unnamed Project' }} <!-- Display project name or fallback -->
+  </li>
+</ul>
+
+<p *ngIf="projects.length === 0">
+  No projects to display yet.
+</p>

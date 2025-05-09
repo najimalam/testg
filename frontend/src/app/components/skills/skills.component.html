@@ -1,0 +1,11 @@
+<h2>Skills</h2>
+
+<ul *ngIf="skills.length > 0">
+  <li *ngFor="let skill of skills">
+    {{ skill.name || 'Unnamed Skill' }} <!-- Display skill name or fallback -->
+  </li>
+</ul>
+
+<p *ngIf="skills.length === 0">
+  No skills to display yet.
+</p>

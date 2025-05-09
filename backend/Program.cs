@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: corsPolicyName,
                       policy =>
                       {
-                          policy.WithOrigins(staticWebAppUrl, "http://localhost:3000") // Allow SWA and local dev
+                          policy.WithOrigins(staticWebAppUrl, "http://localhost:3000", "http://localhost:4200") // Allow SWA, local dev (React?), and local dev (Angular)
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                       });
